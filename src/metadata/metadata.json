@@ -14,9 +14,7 @@
 	],
 	"accounts": {
 		"domain": "yandex.com",
-		"credentials": [
-			"accessToken"
-		]
+		"credentials": [ ]
 	},
 	"blocks": [{
 			"name": "getAdrressByCord",
