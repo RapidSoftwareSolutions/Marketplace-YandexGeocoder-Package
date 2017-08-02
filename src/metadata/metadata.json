@@ -1,0 +1,158 @@
+{
+	"package": "YandexGeocoder",
+	"tagline": "Yandex API",
+	"description": "Yandex is a Russian multinational technology company specializing in Internet-related services and products. Yandex operates the largest search engine in Russia with about 65% market share in that country.The Geocoder can get a geo object's coordinates from its address, or the reverse – determine the address from the coordinates.",
+	"image": "https://logo.clearbit.com/yandex.com",
+	"repo": "https://github.com/RapidSoftwareSolutions/Marketplace-YandexGeocoder-Package",
+	"keywords": [
+		"API",
+		"GeoPosition",
+		"Map",
+		"Yandex",
+		"Coordinates",
+		"Address"
+	],
+	"accounts": {
+		"domain": "yandex.com"
+	},
+	"blocks": [{
+			"name": "getAdrressByCord",
+			"description": "Convert a location's coordinates on the map to an address string.",
+			"args": [{
+					"name": "coordinates",
+					"type": "Map",
+					"info": "The latitude and longitude of the find place",
+					"required": true
+				},
+				{
+					"name": "apikey",
+					"type": "String",
+					"info": "The key obtained in the developer's office. Used only in the paid API version.",
+					"required": false
+				},
+				{
+					"name": "key",
+					"type": "String",
+					"info": "The Yandex.Maps API key. Used in the free API version.",
+					"required": false
+				},
+				{
+					"name": "centerMap",
+					"type": "Map",
+					"info": "Longitude and latitude of the center of the map in degrees.",
+					"required": true
+				},
+				{
+					"name": "lengthDisplayArea",
+					"type": "String",
+					"info": "The length of the map display area by longitude and latitude (in degrees)",
+					"required": false
+				},
+				{
+					"name": "hardLimitation",
+					"type": "Number",
+					"info": "A sign of a 'hard' limitation of the search area,1 or 0.",
+					"required": false
+				},
+				{
+					"name": "results",
+					"type": "Number",
+					"info": "Number of objects returned. The default is 10. The maximum allowable value is 500.",
+					"required": false
+				},
+				{
+					"name": "lang",
+					"type": "String",
+					"info": "Preferred response language.",
+					"required": false
+				},
+				{
+					"name": "sco",
+					"type": "String",
+					"info": "The order of coordinates (only for reverse geocoding). Possible values ​​are:Longlat - longitude, latitude (default);Latlong - latitude, longitude.",
+					"required": false
+				},
+				{
+					"name": "kind",
+					"type": "String",
+					"info": "Kind of toponym.",
+					"required": false
+				}
+
+
+			],
+			"callbacks": [{
+					"name": "error",
+					"info": "Error"
+				},
+				{
+					"name": "success",
+					"info": "Success"
+				}
+			]
+		},
+		{
+			"name": "getCordByAdress",
+			"description": "Convert a location's coordinates on the map to an address string.",
+			"args": [{
+					"name": "address",
+					"type": "String",
+					"info": "The exact address that you want to geocode.",
+					"required": true
+				},
+				{
+					"name": "apikey",
+					"type": "string",
+					"info": "The key obtained in the developer's office. Used only in the paid API version.",
+					"required": false
+				},
+				{
+					"name": "key",
+					"type": "String",
+					"info": "The Yandex.Maps API key. Used in the free API version.",
+					"required": false
+				},
+				{
+					"name": "lengthDisplayArea",
+					"type": "String",
+					"info": "The length of the map display area by longitude and latitude (in degrees).",
+					"required": false
+				},
+				{
+					"name": "hardLimitation",
+					"type": "Number",
+					"info": "A sign of a 'hard' limitation of the search area,1 or 0.",
+					"required": false
+				},
+				{
+					"name": "results",
+					"type": "Number",
+					"info": "Number of objects returned. The default is 10. The maximum allowable value is 500.",
+					"required": false
+				},
+				{
+					"name": "lang",
+					"type": "String",
+					"info": "Preferred response language.",
+					"required": true
+				}
+
+
+
+			],
+			"callbacks": [{
+					"name": "error",
+					"info": "Error"
+				},
+				{
+					"name": "success",
+					"info": "Success"
+				}
+			]
+		}
+
+	]
+
+
+
+}
