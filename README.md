@@ -5,6 +5,7 @@ Yandex is a Russian multinational technology company specializing in Internet-re
 * Domain: [yandex.com](https://yandex.com)
 
 
+
 ## How to get credentials:
 1. Navigate to [Developers Console](https://developer.tech.yandex.com/keys).
 2. Create API app.
