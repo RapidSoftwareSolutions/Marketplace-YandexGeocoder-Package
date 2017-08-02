@@ -13,7 +13,10 @@
 		"Address"
 	],
 	"accounts": {
-		"domain": "yandex.com"
+		"domain": "yandex.com",
+		"credentials": [
+			"accessToken"
+		]
 	},
 	"blocks": [{
 			"name": "getAdrressByCord",
