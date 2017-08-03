@@ -3,7 +3,6 @@
 $app->post('/api/YandexGeocoder/getAddressByCoordinates', function ($request, $response) {
 
 
-ini_set('display_errors',1);
       $settings = $this->settings;
       $checkRequest = $this->validation;
       $validateRes = $checkRequest->validate($request, ['coordinates']);

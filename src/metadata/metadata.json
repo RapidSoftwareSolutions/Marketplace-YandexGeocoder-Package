@@ -95,7 +95,7 @@
 			]
 		},
 		{
-			"name": "/api/YandexGeocoder/getCoordinatesByAddress",
+			"name": "getCoordinatesByAddress",
 			"description": "Convert address to coordinates.",
 			"args": [{
 					"name": "address",
