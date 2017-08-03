@@ -26,7 +26,6 @@ Convert a location's coordinates on the map to an address string.
 |------------|------------|----------
 | coordinates| Map        | The latitude and longitude of the find place.
 | apikey     | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API.
-| key        | String| The Yandex.Maps API key. Used in the free API version.
 | centerMap         | Map        | Longitude and latitude of the center of the map in degrees.
 | lengthDisplayArea        | String     | The length of the map display area by longitude and latitude (in degrees).
 | hardLimitation       | Number     | A sign of a 'hard' limitation of the search area,1 or 0.
@@ -41,7 +40,6 @@ Convert a location's coordinates on the map to an address string.
 |---------|------------|----------
 | address | String     | The exact address that you want to geocode.
 | apikey  | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API
-| key     | String| The Yandex.Maps API key. Used in the free API version.
 | lengthDisplayArea     | String     | The length of the map display area by longitude and latitude (in degrees).
 | hardLimitation    | Number     | A sign of a 'hard' limitation of the search area,1 or 0.
 | results | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
