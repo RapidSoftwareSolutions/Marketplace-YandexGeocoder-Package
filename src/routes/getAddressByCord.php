@@ -35,6 +35,9 @@
         $queryParam[$keyArr] = $post_data['args'][$value];
       }
     }
+        
+        print_r($queryParam);
+        exit();
 
 
    $client = $this->httpClient;
