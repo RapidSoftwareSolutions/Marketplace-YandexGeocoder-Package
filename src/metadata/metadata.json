@@ -32,12 +32,6 @@
 					"required": false
 				},
 				{
-					"name": "key",
-					"type": "String",
-					"info": "The Yandex.Maps API key. Used in the free API version.",
-					"required": false
-				},
-				{
 					"name": "centerMap",
 					"type": "Map",
 					"info": "Longitude and latitude of the center of the map in degrees.",
@@ -105,12 +99,6 @@
 					"name": "apikey",
 					"type": "String",
 					"info": "The key obtained in the developer's office. Used only in the paid API version.",
-					"required": false
-				},
-				{
-					"name": "key",
-					"type": "String",
-					"info": "The Yandex.Maps API key. Used in the free API version.",
 					"required": false
 				},
 				{
