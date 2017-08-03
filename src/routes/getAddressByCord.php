@@ -20,7 +20,7 @@
 
     $client = $this->httpClient;
 
-    $cord = $post_data['coordinates'];
+    $cord = $post_data['args']['coordinates'];
     $queryParam = array('geocode' => $cord,'format' => 'json');
     foreach($option as $key => $value)
     {
