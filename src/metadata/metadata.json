@@ -103,7 +103,7 @@
 				},
 				{
 					"name": "apikey",
-					"type": "string",
+					"type": "String",
 					"info": "The key obtained in the developer's office. Used only in the paid API version.",
 					"required": false
 				},
