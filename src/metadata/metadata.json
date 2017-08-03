@@ -17,7 +17,7 @@
 		"credentials": [ ]
 	},
 	"blocks": [{
-			"name": "getAdrressByCord",
+			"name": "getAddressByCord",
 			"description": "Convert a location's coordinates on the map to an address string.",
 			"args": [{
 					"name": "coordinates",
