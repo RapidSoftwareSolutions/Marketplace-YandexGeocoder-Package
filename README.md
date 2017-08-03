@@ -19,30 +19,31 @@ Yandex is a Russian multinational technology company specializing in Internet-re
   |Select|String with predefined values|```sample```
   |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
 
-## YandexGeocoder.getAdrressByCord
+## YandexGeocoder.getAddressByCoordinates
 Convert a location's coordinates on the map to an address string.
 
 | Field      | Type       | Description
 |------------|------------|----------
 | coordinates| Map        | The latitude and longitude of the find place.
-| apikey     | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API.
+| apiKey     | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API.
 | centerMap         | Map        | Longitude and latitude of the center of the map in degrees.
-| lengthDisplayArea        | String     | The length of the map display area by longitude and latitude (in degrees).
-| hardLimitation       | Number     | A sign of a 'hard' limitation of the search area,1 or 0.
+| searchAreaSize        | String     | The length of the map display area by longitude and latitude (in degrees).
+| searchAreaRestriction       | List     | A sign of a 'hard' limitation of the search area.
 | results    | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
-| lang       | String     | Preferred response language. List of supported values: tr_TR — Turkish (only for maps of Turkey); en_RU — United States; en_US — American English; ru_RU — Russian (by default); uk_UA — Ukrainian; be_BY — Belarusian;
-| kind       | String     | Type of toponym (only for reverse geocoding). Acceptable values: house - house or building; street - street; metro - subway station; district - city district; locality - locality (city, town, village, etc.).
+| language       | String     | Preferred response language. List of supported values: tr_TR — Turkish (only for maps of Turkey); en_RU — United States; en_US — American English; ru_RU — Russian (by default); uk_UA — Ukrainian; be_BY — Belarusian;
+| toponymType       | String     | Type of toponym (only for reverse geocoding). Acceptable values: house - house or building; street - street; metro - subway station; district - city district; locality - locality (city, town, village, etc.).
+| alternativeSearch   | String | In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).
 
-## YandexGeocoder.getCordByAdress
-Convert a location's coordinates on the map to an address string.
+## YandexGeocoder.getCoordinatesByAddress
+Convert address to coordinates.
 
 | Field   | Type       | Description
 |---------|------------|----------
 | address | String     | The exact address that you want to geocode.
-| apikey  | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API
-| lengthDisplayArea     | String     | The length of the map display area by longitude and latitude (in degrees).
-| hardLimitation    | Number     | A sign of a 'hard' limitation of the search area,1 or 0.
+| apiKey  | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API
+| searchAreaSize     | String     | The length of the map display area by longitude and latitude (in degrees).
+| searchAreaRestriction    | List     | A sign of a 'hard' limitation of the search area.
 | results | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
-| lang    | String     | Preferred response language.
-| sco   | String | The order coordinates are specified in (only for reverse geocoding).Example : sco=latlong.
-
+| language    | String     | Preferred response language.
+| orderCoordinates   | String | The order coordinates are specified in (only for reverse geocoding).Example : sco=latlong.
+| alternativeSearch   | String | In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).

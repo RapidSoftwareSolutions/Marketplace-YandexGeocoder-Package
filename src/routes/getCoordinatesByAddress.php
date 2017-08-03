@@ -1,35 +1,65 @@
 <?php
-    $app->post('/api/YandexGeocoder/getAddressByCord', function ($request, $response) {
+
+$app->post('/api/YandexGeocoder/getCoordinatesByAddress', function ($request, $response) {
+
+
+ini_set('display_errors',1);
       $settings = $this->settings;
       $checkRequest = $this->validation;
-      $validateRes = $checkRequest->validate($request, ['coordinates']);
+      $validateRes = $checkRequest->validate($request, ['address']);
       //optional params
-      $option = array('key','sco','kind','ll','spn','bbox','rspn','results','skip','lang','apikey','callback');
-      $alias = array('centerMap' => 'll','lengthDisplayArea' => 'spn','hardLimitation' => 'rspn');
+      $option = array(
+        'address' => 'geocode',
+        'orderCoordinates' => 'sco',
+        'toponymType' => 'kind',
+        'mapCenter' => 'll',
+        'searchAreaSize' => 'spn',
+        'alternativeSearch' => 'bbox',
+        'searchAreaRestriction' => 'rspn',
+        'results' => 'results',
+        'skip' => 'skip',
+        'language' => 'lang',
+        'apiKey' => 'apikey'
+      );
+      $arrayType = array();
+
       if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
           return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
       } else {
-          $post_data = $validateRes;
+          $postData = $validateRes;
       }
       $client = $this->httpClient;
-      $cord = $post_data['args']['coordinates'];
-      $queryParam = array('geocode' => $cord,'format' => 'json');
-      foreach($option as $key => $value)
-      {
-        if(!empty($post_data['args'][$value]))
-        {
-            if(in_array($value,$alias))
+      $queryParam = array('format' => 'json');
+
+
+      $part = explode(',',$postData['args']['mapCenter']);
+            if(!empty($part[0]) && !empty($part[1]))
             {
-                $keyArr = $alias[$value];
-            } else {
-                $keyArr = $value;
+              $part[0] = trim($part[0]);
+              $part[1] = trim($part[1]);
             }
-          $queryParam[$keyArr] = $post_data['args'][$value];
+        $postData['args']['mapCenter'] = implode(',',array_reverse($part));
+
+      if(!empty($postData['args']['searchAreaRestriction'][0]) && $postData['args']['searchAreaRestriction'][0] == 'On')
+      {
+        $postData['args']['searchAreaRestriction'] = 1;
+      }
+    foreach($option as $alias => $value)
+      {
+        if(!empty($postData['args'][$alias]))
+        {
+            if(in_array($alias,$arrayType))
+            {
+              $postData['args'][$alias] = implode(',',$postData['args'][$alias]);
+            }
+            $queryParam[$value] = $postData['args'][$alias];
         }
       }
 
-  
+
+
      $client = $this->httpClient;
+
 
      try {
        $resp =  $client->request('GET',  'https://geocode-maps.yandex.ru/1.x/', ['query' => $queryParam]);
