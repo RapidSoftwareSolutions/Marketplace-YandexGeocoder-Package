@@ -36,8 +36,7 @@
       }
     }
         
-        print_r($queryParam);
-        exit();
+   
 
 
    $client = $this->httpClient;
