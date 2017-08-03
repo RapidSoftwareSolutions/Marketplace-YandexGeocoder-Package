@@ -46,4 +46,5 @@ Convert a location's coordinates on the map to an address string.
 | hardLimitation    | Number     | A sign of a 'hard' limitation of the search area,1 or 0.
 | results | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
 | lang    | String     | Preferred response language.
+| sco   | String | The order coordinates are specified in (only for reverse geocoding).Example : sco=latlong.
 
