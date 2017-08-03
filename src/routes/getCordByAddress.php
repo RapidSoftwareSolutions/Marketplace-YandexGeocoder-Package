@@ -1,7 +1,8 @@
 <?php
     $app->post('/api/YandexGeocoder/getCordByAddress', function ($request, $response) {
 
-
+    echo 2;
+        exit();
     $settings = $this->settings;
 
     $checkRequest = $this->validation;
