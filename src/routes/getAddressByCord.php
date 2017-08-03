@@ -1,5 +1,5 @@
 <?php
-    $app->get('/api/YandexGeocoder/getAddressByCord', function ($request, $response) {
+    $app->post('/api/YandexGeocoder/getAddressByCord', function ($request, $response) {
 
 
     $settings = $this->settings;
