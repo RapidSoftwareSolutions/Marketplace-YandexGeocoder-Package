@@ -27,7 +27,7 @@ Convert a location's coordinates on the map to an address string.
 | coordinates| Map        | The latitude and longitude of the find place.
 | apiKey     | String| The key obtained in the developer's office. Used only in the paid API version. Used only in the commercial version of the API.
 | centerMap         | Map        | Longitude and latitude of the center of the map in degrees.
-| searchAreaSize        | String     | The length of the map display area by longitude and latitude (in degrees).
+| searchAreaSize        | String     | The length of the map display area by longitude and latitude (in degrees).```For reverse geocoding, the centerMap parameter is ignored, and searchAreaSize  is taken into account only if the kind parameter takes one of the following values: district. Wrong in orginal docs. ```
 | searchAreaRestriction       | Select     | A sign of a 'hard' limitation of the search area.
 | results    | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
 | language       | String     | Preferred response language. List of supported values: tr_TR — Turkish (only for maps of Turkey); en_RU — United States; en_US — American English; ru_RU — Russian (by default); uk_UA — Ukrainian; be_BY — Belarusian;
