@@ -47,7 +47,7 @@
 			 "name": "searchAreaRestriction",
 			 "type": "Select",
 			 "options": ["On"],
-			 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or viewportRange + mapCenter.",
+			 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or searchAreaSize + mapCenter.",
 			 "required": false
 		 },
 				 {
@@ -133,7 +133,7 @@
 					 "name": "searchAreaRestriction",
 					 "type": "Select",
 					 "options": ["On"],
-					 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or viewportRange + mapCenter.",
+					 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or searchAreaSize + mapCenter.",
 					 "required": false
 				 },
         {
