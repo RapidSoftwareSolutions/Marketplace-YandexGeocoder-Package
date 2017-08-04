@@ -68,7 +68,7 @@ $app->post('/api/YandexGeocoder/getCoordinatesByAddress', function ($request, $r
          if(in_array($resp->getStatusCode(), ['200', '201', '202', '203', '204'])) {
 
              $result['callback'] = 'success';
-             $result['contextWrites']['to'] =  $responseBody;
+             $result['contextWrites']['to'] =  array('status' => 'success','result' => $responseBody);
              if(empty($result['contextWrites']['to'])) {
                  $result['contextWrites']['to']['status_msg'] = "This item exist";
              }
