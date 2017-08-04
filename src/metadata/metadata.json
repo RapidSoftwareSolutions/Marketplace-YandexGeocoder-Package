@@ -72,13 +72,13 @@
 				{
 					"name": "orderCoordinates",
 					"type": "Select",
-					"option":["longlat","latlong"],
+					"options":["longlat","latlong"],
 					"info": "The order of coordinates (only for reverse geocoding). Possible values ​​are:Longlat - longitude, latitude (default);Latlong - latitude, longitude.",
 					"required": false
 				},
 				{
 					"name": "toponymType",
-					"type": ":List",
+					"type": "List",
 					"info": "Kind of toponym.",
 					"required": false,
 					"structure": {
