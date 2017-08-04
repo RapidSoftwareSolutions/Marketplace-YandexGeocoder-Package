@@ -40,7 +40,7 @@
 				{
 					"name": "searchAreaSize",
 					"type": "String",
-					"info": "The length of the map display area by longitude and latitude (in degrees)",
+					"info": "The length of the map display area by longitude and latitude (in degrees).",
 					"required": false
 				},
 				{
@@ -50,12 +50,12 @@
 			 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or viewportRange + mapCenter.",
 			 "required": false
 		 },
-		 {
-		"name": "alternativeSearch",
-		"type": "String",
-		"info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).",
-		"required": false
-	},
+				 {
+				"name": "alternativeSearch",
+				"type": "String",
+				"info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).",
+				"required": false
+			},
 
 				{
 					"name": "results",
@@ -71,15 +71,23 @@
 				},
 				{
 					"name": "orderCoordinates",
-					"type": "String",
+					"type": "Select",
+					"option":["longlat","latlong"],
 					"info": "The order of coordinates (only for reverse geocoding). Possible values ​​are:Longlat - longitude, latitude (default);Latlong - latitude, longitude.",
 					"required": false
 				},
 				{
 					"name": "toponymType",
-					"type": "String",
+					"type": ":List",
 					"info": "Kind of toponym.",
-					"required": false
+					"required": false,
+					"structure": {
+					 "name": "toponymType",
+					 "type": "Select",
+					 "options": ["house","street","metro","district","locality"],
+					 "info": "Select toponym type",
+					 "required": true
+				 }
 				}
 
 
@@ -140,24 +148,12 @@
           "info": "Preferred response language.",
           "required": false
         },
-        {
-          "name": "orderCoordinates",
-          "type": "String",
-          "info": "The order of coordinates (only for reverse geocoding). Possible values ​​are:Longlat - longitude, latitude (default);Latlong - latitude, longitude.",
-          "required": false
-        },
 				{
 			 "name": "alternativeSearch",
 			 "type": "String",
 			 "info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).",
 			 "required": false
-		 },
-        {
-          "name": "toponymType",
-          "type": "String",
-          "info": "Kind of toponym.",
-          "required": false
-        }
+		 }
 
 
 			],

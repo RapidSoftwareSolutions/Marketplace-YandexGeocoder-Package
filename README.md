@@ -31,8 +31,9 @@ Convert a location's coordinates on the map to an address string.
 | searchAreaRestriction       | List     | A sign of a 'hard' limitation of the search area.
 | results    | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
 | language       | String     | Preferred response language. List of supported values: tr_TR — Turkish (only for maps of Turkey); en_RU — United States; en_US — American English; ru_RU — Russian (by default); uk_UA — Ukrainian; be_BY — Belarusian;
-| toponymType       | String     | Type of toponym (only for reverse geocoding). Acceptable values: house - house or building; street - street; metro - subway station; district - city district; locality - locality (city, town, village, etc.).
+| toponymType       | List     | Type of toponym (only for reverse geocoding). Acceptable values: house - house or building; street - street; metro - subway station; district - city district; locality - locality (city, town, village, etc.).
 | alternativeSearch   | String | In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).
+| orderCoordinates   | String | The order coordinates are specified in (only for reverse geocoding).
 
 ## YandexGeocoder.getCoordinatesByAddress
 Convert address to coordinates.
@@ -45,5 +46,4 @@ Convert address to coordinates.
 | searchAreaRestriction    | List     | A sign of a 'hard' limitation of the search area.
 | results | Number     | Number of objects returned. The default is 10. The maximum allowable value is 500.
 | language    | String     | Preferred response language.
-| orderCoordinates   | String | The order coordinates are specified in (only for reverse geocoding).Example : sco=latlong.
 | alternativeSearch   | String | In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).
