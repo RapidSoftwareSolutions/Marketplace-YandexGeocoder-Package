@@ -40,7 +40,7 @@
 				{
 					"name": "searchAreaSize",
 					"type": "String",
-					"info": "The length of the map display area by longitude and latitude (in degrees).",
+					"info": "The length of the map display area by longitude and latitude (in degrees).Example - 0.552069,0.400552;",
 					"required": false
 				},
 				{
@@ -53,7 +53,7 @@
 				 {
 				"name": "alternativeSearch",
 				"type": "String",
-				"info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).",
+				"info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (Example - 36.6,54.6~38.6,56.6).",
 				"required": false
 			},
 
@@ -126,7 +126,7 @@
         {
           "name": "searchAreaSize",
           "type": "String",
-          "info": "The length of the map display area by longitude and latitude (in degrees)",
+          "info": "The length of the map display area by longitude and latitude (in degrees).Example - 0.552069,0.400552;",
           "required": false
         },
 				{
@@ -151,7 +151,7 @@
 				{
 			 "name": "alternativeSearch",
 			 "type": "String",
-			 "info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (in the order longitude, latitutude).",
+			 "info": "In this case, the borders of the area are defined as the geographical coordinates of the lower-left and upper-right corners of the area (Example - 36.6,54.6~38.6,56.6).",
 			 "required": false
 		 }
 

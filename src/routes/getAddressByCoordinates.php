@@ -53,7 +53,7 @@ $app->post('/api/YandexGeocoder/getAddressByCoordinates', function ($request, $r
 
 
 
-      if(!empty($postData['args']['searchAreaRestriction'][0]) && $postData['args']['searchAreaRestriction'][0] == 'On')
+      if(!empty($postData['args']['searchAreaRestriction']) && $postData['args']['searchAreaRestriction'] == 'On')
       {
         $postData['args']['searchAreaRestriction'] = 1;
       }
