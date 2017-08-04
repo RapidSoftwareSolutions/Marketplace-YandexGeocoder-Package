@@ -78,16 +78,10 @@
 				},
 				{
 					"name": "toponymType",
-					"type": "List",
+					"type": "Select",
 					"info": "Kind of toponym.",
 					"required": false,
-					"structure": {
-					 "name": "toponymType",
-					 "type": "Select",
-					 "options": ["house","street","metro","district","locality"],
-					 "info": "Select toponym type",
-					 "required": true
-				 }
+					"options" : ["house","street","metro","district","locality"]
 				}
 
 
