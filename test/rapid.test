@@ -1,0 +1,99 @@
+{
+	"name": "YandexGeocoder",
+	"description": "Yandex is a Russian multinational technology company specializing in Internet-related services and products. Yandex operates the largest search engine in Russia with about 65% market share in that country.The Geocoder can get a geo object's coordinates from its address, or the reverse – determine the address from the coordinates.",
+	"connect": {
+		"username": "qa-project",
+		"password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+	},
+	"dependencies": {
+
+	},
+	"blocks": [
+		{
+			"name": "getAddressByCoordinates",
+			"note": "",
+			"skip": false,
+			"params": [
+				{
+					"key": "coordinates",
+					"value": "37.611,55.758"
+				},
+				{
+					"key": "apiKey",
+					"value": ""
+				},
+				{
+					"key": "centerMap",
+					"value": "37.611,55.758"
+				},
+				{
+					"key": "searchAreaSize",
+					"value": "0.552069,0.400552"
+				},
+				{
+					"key": "searchAreaRestriction",
+					"value": "On"
+				},
+				{
+					"key": "alternativeSearch",
+					"value": "36.6,54.6~38.6,56.6"
+				},
+				{
+					"key": "results",
+					"value": 10
+				},
+				{
+					"key": "language",
+					"value": "en_US"
+				},
+				{
+					"key": "orderCoordinates",
+					"value": "latlong"
+				},
+				{
+					"key": "toponymType",
+					"value": ["street"]
+				}
+			]
+		},
+		{
+			"name": "getCoordinatesByAddress",
+			"note": "",
+			"skip": false,
+			"params": [
+				{
+					"key": "address",
+					"value": "ул. Тверская, дом 7"
+				},
+				{
+					"key": "apiKey",
+					"value": ""
+				},
+				{
+					"key": "centerMap",
+					"value": "37.611,55.758"
+				},
+				{
+					"key": "searchAreaSize",
+					"value": "0.552069,0.400552"
+				},
+				{
+					"key": "searchAreaRestriction",
+					"value": "On"
+				},
+				{
+					"key": "results",
+					"value": 10
+				},
+				{
+					"key": "language",
+					"value": "en_US"
+				},
+				{
+					"key": "alternativeSearch",
+					"value": "36.6,54.6~38.6,56.6"
+				}
+			]
+		}
+	]
+}

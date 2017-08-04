@@ -1,7 +1,7 @@
 {
 	"package": "YandexGeocoder",
 	"tagline": "Yandex API",
-	"description": "Yandex is a Russian multinational technology company specializing in Internet-related services and products. Yandex operates the largest search engine in Russia with about 65% market share in that country.The Geocoder can get a geo object's coordinates from its address, or the reverse – determine the address from the coordinates.",
+	"description": "Yandex is a Russian multinational technology company specializing in Internet-related services and products. Yandex operates the largest search engine in Russia with about 65% market share in that country.The Geocoder can get a geo object`s coordinates from its address, or the reverse – determine the address from the coordinates.",
 	"image": "https://logo.clearbit.com/yandex.com",
 	"repo": "https://github.com/RapidSoftwareSolutions/Marketplace-YandexGeocoder-Package",
 	"keywords": [
@@ -18,7 +18,7 @@
 	},
 	"blocks": [{
 			"name": "getAddressByCoordinates",
-			"description": "Convert a location's coordinates on the map to an address string.",
+			"description": "Convert a location`s coordinates on the map to an address string.",
 			"args": [{
 					"name": "coordinates",
 					"type": "Map",
@@ -28,7 +28,7 @@
 				{
 					"name": "apiKey",
 					"type": "String",
-					"info": "The key obtained in the developer's office. Used only in the paid API version.",
+					"info": "The key obtained in the developer`s office. Used only in the paid API version.",
 					"required": false
 				},
 				{
@@ -47,7 +47,7 @@
 			 "name": "searchAreaRestriction",
 			 "type": "Select",
 			 "options": ["On"],
-			 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or searchAreaSize + mapCenter.",
+			 "info": "A sign of a `hard` limitation of the search area. Use with alternativeSearch or searchAreaSize + mapCenter.",
 			 "required": false
 		 },
 				 {
@@ -114,7 +114,7 @@
         {
           "name": "apiKey",
           "type": "String",
-          "info": "The key obtained in the developer's office. Used only in the paid API version.",
+          "info": "The key obtained in the developer`s office. Used only in the paid API version.",
           "required": false
         },
         {
@@ -133,7 +133,7 @@
 					 "name": "searchAreaRestriction",
 					 "type": "Select",
 					 "options": ["On"],
-					 "info": "A sign of a 'hard' limitation of the search area. Use with alternativeSearch or searchAreaSize + mapCenter.",
+					 "info": "A sign of a `hard` limitation of the search area. Use with alternativeSearch or searchAreaSize + mapCenter.",
 					 "required": false
 				 },
         {

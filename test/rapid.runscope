@@ -1,0 +1,79 @@
+{
+  	"name": "YandexGeocoder", 
+  	"description": "Yandex is a Russian multinational technology company specializing in Internet-related services and products. Yandex operates the largest search engine in Russia with about 65% market share in that country.The Geocoder can get a geo object's coordinates from its address, or the reverse – determine the address from the coordinates.",
+  	"version": "1.0", 
+  	"steps": [  
+        {
+            "body": "{\r\n\t\"coordinates\": \"37.611,55.758\",\r\n\t\"apiKey\": \"\",\r\n\t\"centerMap\": \"37.611,55.758\",\r\n\t\"searchAreaSize\": \"0.552069,0.400552\",\r\n\t\"searchAreaRestriction\": \"On\",\r\n\t\"alternativeSearch\": \"36.6,54.6~38.6,56.6\",\r\n\t\"results\": \"10\",\r\n\t\"language\": \"en_US\",\r\n\t\"orderCoordinates\": \"latlong\",\r\n\t\"toponymType\": \"street\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/YandexGeocoder/getAddressByCoordinates", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"address\": \"ул. Тверская, дом 7\",\r\n\t\"apiKey\": \"\",\r\n\t\"centerMap\": \"37.611,55.758\",\r\n\t\"searchAreaSize\": \"0.552069,0.400552\",\r\n\t\"searchAreaRestriction\": \"On\",\r\n\t\"results\": \"10\",\r\n\t\"language\": \"en_US\",\r\n\t\"alternativeSearch\": \"36.6,54.6~38.6,56.6\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/YandexGeocoder/getCoordinatesByAddress", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        }
+  	]
+}
